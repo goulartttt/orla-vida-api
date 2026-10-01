@@ -1,0 +1,11 @@
+node_modules
+coverage
+.vercel
+
+# Segredos: nunca versionar
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store
