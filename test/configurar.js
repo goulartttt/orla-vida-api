@@ -9,6 +9,7 @@ process.env.JWT_SECRET = randomBytes(32).toString('hex');
 process.env.CPF_CHAVE_CRIPTOGRAFIA = randomBytes(32).toString('base64');
 process.env.CPF_CHAVE_HMAC = randomBytes(32).toString('hex');
 process.env.MONGODB_URI = 'mongodb://127.0.0.1:1/nao-usado-nos-testes';
+process.env.PROXY_SECRET = randomBytes(32).toString('hex');
 
 let servidor;
 

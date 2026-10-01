@@ -6,3 +6,4 @@ import { randomBytes } from 'node:crypto';
 console.log(`JWT_SECRET=${randomBytes(48).toString('base64url')}`);
 console.log(`CPF_CHAVE_CRIPTOGRAFIA=${randomBytes(32).toString('base64')}`);
 console.log(`CPF_CHAVE_HMAC=${randomBytes(32).toString('base64url')}`);
+console.log(`PROXY_SECRET=${randomBytes(32).toString('base64url')}`);

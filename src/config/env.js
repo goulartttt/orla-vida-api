@@ -10,6 +10,8 @@ const esquema = z.object({
     .refine((valor) => Buffer.from(valor, 'base64').length === 32, 'deve ter 32 bytes em base64'),
   CPF_CHAVE_HMAC: z.string().min(32, 'deve ter pelo menos 32 caracteres'),
   ORIGENS_PERMITIDAS: z.string().default('http://localhost:5173'),
+  // Segredo compartilhado com o proxy do site (orla-vida/api/proxy.js). Opcional em desenvolvimento.
+  PROXY_SECRET: z.string().min(32, 'deve ter pelo menos 32 caracteres').optional(),
 });
 
 let configuracao;
